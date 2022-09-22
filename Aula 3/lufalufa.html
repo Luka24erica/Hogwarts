@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Lufa-Lufa</title>
+        <link rel="shortcut icon" href="imagens/favicon.png" type="image/png">
+    
+        <script>
+            function showInput() {
+    
+                document.getElementById('out1').innerHTML = document.getElementById('txtNome').value;
+    
+                document.getElementById('out2').innerHTML = document.querySelector('input[name="casa"]:checked').value;
+    
+    
+                var checked = [].reduce.call(document.forms[0].carac, function(current, item) {
+    
+                    if (item.checked) {
+    
+                        current.push(item.value);
+    
+                    }
+    
+                    return current;
+    
+                }, []);
+    
+                document.getElementById('out3').innerHTML = checked;
+    
+            }
+    
+        </script>
+    </head>
+    <body>
+        <div class="mae">
+            <div class="header">
+                <a href="index.html"><img id="logo" src="imagens/logo.png"></a>
+            </div>
+            <nav class="menu">
+                <a class="menu menu--option" href="jkrowling.html">J.K. Rowling</a>
+                <a class="menu menu--option" href="personagemfavorito.html">Personagem Favorito</a>
+               
+            </nav>
+        </div>
+        
+        <div class="casas-conteudo">
+            <div class="emblema">
+                <img src="imagens/hufflepuff.png">
+            </div>
+            <div class="conteudo-texto">
+                <div class="frase-casa">
+                <p>
+                    "Quem sabe é na Lufa-Lufa que você vai morar,<br/>
+                    Onde seus moradores são justos e leais<br/>
+                    Pacientes, sinceros, sem medo da dor."<br/>
+                    — O Chapéu Seletor
+                </p>
+            </div>
+            <p>
+                A Lufa-Lufa, fundada por Helga Hufflepuff, é uma das quatro casas da Escola de Magia e Bruxaria de Hogwarts, sendo conhecida como a mais inclusiva entre as outras três; valorizando o trabalho árduo, a dedicação,
+                a paciência, a lealdade e o jogo limpo ao invés de uma aptidão particular de seus membros. Seu animal emblemático é um texugo e suas cores são o amarelo e o preto. A diretora da casa mais notável é a Mestra de Herbologia Pomona Sprout e seu fantasma patrono é o Frei Gorducho.
+                A casa corresponde aproximadamente ao elemento terra, e é por essa razão que suas cores foram escolhidas: o amarelo representa o trigo, enquanto o preto um símbolo do solo. Os estudantes classificados para a Lufa-Lufa comumente demonstram habilidades excepcionais em Herbologia, dado à correspondência da casa com a terra.
+            </p>
+            <hr>
+            <p class="subtitulo">Traços</p>
+            <p>
+                Os alunos pertencentes a casa são conhecidos por serem dedicados, amigáveis, leais, honestos e bastante imparciais. Pode ser que, devido a seus valores, os Lufanos não sejam tão competitivos quanto as outras casas, sendo até mesmo mais modestos com suas realizações.
+                Os membros da casa também são conhecidos por possuírem um forte código de moral e um senso de certo e errado. Eles, geralmente, aceitam a todos, os valorizando e tratando-os como seus iguais.
+                Como dito, a Lufa-Lufa parece ter uma menor rivalidade com as outras casas, exceto quando se tratando de quadribol — embora no Torneio Tribruxo de 1994, a casa ficou temporariamente com uma grande tensão em seu relacionamento com a Grifinória, dado as circunstâncias incomuns da seleção do aluno Grifinório Harry Potter e o Lufano Cedrico Diggory como os campeões da escola.
+                Entretanto, isso foi restaurado em 1998, quando a maioria da Lufa-Lufa saiu em defesa de Harry e se opôs a Pansy Parkinson, ajudando posteriormente a defender a escola durante a Batalha de Hogwarts.
+            </p>
+        </div>
+    </body>
+</html>

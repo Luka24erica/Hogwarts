@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Casas de Hogwarts</title>
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/png">
+
+    <script>
+        function showInput() {
+
+            document.getElementById('out1').innerHTML = document.getElementById('txtNome').value;
+
+            document.getElementById('out2').innerHTML = document.querySelector('input[name="casa"]:checked').value;
+
+
+            var checked = [].reduce.call(document.forms[0].carac, function(current, item) {
+
+                if (item.checked) {
+
+                    current.push(item.value);
+
+                }
+
+                return current;
+
+            }, []);
+
+            document.getElementById('out3').innerHTML = checked;
+
+        }
+
+    </script>
+</head>
+<body>
+    <div class="mae">
+        <!--cabecalho-->
+        <div class="header">
+            <a href="index.html">
+                <img id="logo" src="imagens/logo.png">
+            </a>
+        </div>
+    </div>
+    <nav class="menu">
+        <a class="menu menu--option" href="jkrowlin.html">J.K. Rowlin</a>
+        <a class="menu menu--option" href="personagemfavorito.html">Personagem Favorito</a>
+    </nav>
+     </div>
+
+     <div class="mae" id="pf-conteudo">
+        <div class="form">
+            <form>
+                <label>Qual o nome do seu personagem favorito?</label>
+                <div class="input-text">
+                    <input type="text" name="nomepersonagem" id="txtNome" placeholder="Nome do seu personagem favorito">
+                </div>
+                <label>De qual casa é o seu personagem favorito?</label>
+                <div class="input-opcoes">
+                    <input type="radio" id="casa" name="casa" value="Lufa-Lufa">
+                    <label for="casa1">Lufa-Lufa</label>
+
+                    <input type="radio" id="casa" name="casa" value="Sonserina">
+                    <label for="casa2">Sonserina</label>
+
+                    <input type="radio" id="casa" name="casa" value="Corvinal">
+                    <label for="casa3">Corvinal</label>
+
+                    <input type="radio" id="casa" name="casa" value="Grifinória">
+                    <label for="casa4">Grifinória</label>
+                </div>
+                <label>Selecione as Características do seu personagem favorito:</label>
+                <div class="input-opcoes">
+                    <input type="checkbox" id="check1" name="carac" value="Leal">
+                    <label for="check1">Leal</label>
+
+                    <input type="checkbox" id="check2" name="carac" value="Orgulhoso">
+                    <label for="check1">Orgulhoso</label>
+
+                    <input type="checkbox" id="check3" name="carac" value="Curioso">
+                    <label for="check1">Curioso</label>
+
+                    <input type="checkbox" id="check4" name="carac" value="Inteligente">
+                    <label for="check1">Inteligente</label>
+                </div>
+                <input type="button" class="botao" value="Enviar" onclick="showInput();">
+                <input type="reset" class="botao" value="Limpar">
+            </form>
+        </div>
+        <div class="output">
+            <p>Personagem Favorito:</p>
+            <p id="out1"></p>
+            <p>Casa do seu personagem favorito:</p>
+            <p id="out2"></p>
+            <p>Características do personagem:</p>
+            <p id="out3"></p>
+        </div>
+     </div>
+</body>
+</html>

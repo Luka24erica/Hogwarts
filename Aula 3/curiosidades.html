@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>curiosidades</title>
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/png">
+
+    <script>
+        function showInput() {
+
+            document.getElementById('out1').innerHTML = document.getElementById('txtNome').value;
+
+            document.getElementById('out2').innerHTML = document.querySelector('input[name="casa"]:checked').value;
+
+
+            var checked = [].reduce.call(document.forms[0].carac, function(current, item) {
+
+                if (item.checked) {
+
+                    current.push(item.value);
+
+                }
+
+                return current;
+
+            }, []);
+
+            document.getElementById('out3').innerHTML = checked;
+
+        }
+
+    </script>
+</head>
+<body>
+    <div class="mae">
+        <div class="header">
+            <a href="index.html"><img id="logo" src="imagens/logo.png"></a>
+        </div>
+        <nav class="menu">
+            <a class="menu menu--option" href="jkrowlin.html">J.K. Rowling</a>
+            <a class="menu menu--option" href="personagemfavorito.html">Personagem Favorito</a>
+            <a class="menu menu menu--option" href="curiosidades.html">curiosidades</a>
+        </nav>
+    </div>
+    <div id="conteudo-jk">
+        <div id="fotos">
+            <p>Sobre a saga:</p>
+            <img src="imagens/favicon-removebg-preview.png">
+        </div>
+        <div id="bio-jk">
+            <p class="subtitulo">Significado do lema de Hogwarts</p>
+            <p>
+                “Draco Dormiens Nunquam Titillandus”. Parece profundo, não? Provindo do latim, a frase traduzida seria “nunca faça cócegas em um dragão adormecido”.
+                 Entende-se que o lema tenta passar a mensagem de que não se deve procurar problemas, porém os nossos protagonistas não levaram muito a sério. 
+            </p>
+            <hr>
+            <p>
+                <p class="subtitulo">E o filme?</p>
+                Nos EUA, o nome do filme é “Harry Potter and the Sorcerer’s Stone”, então toda vez que alguém do elenco usava o termo “Philosopher’s” para se referir a pedra, a cena toda era regravada.
+                O título original do livro é “Harry Potter and the Philosopher’s Stone”, mas a editora americana decidiu mudar para “Harry Potter and the Sorcerer’s Stone” na edição lançada nos Estados Unidos, fazendo com que o filme tomasse o mesmo rumo. 
+                
+                
+            </p>
+        </div>
+    </div>
+</body>
+</html>

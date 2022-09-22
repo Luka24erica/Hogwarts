@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Grifinória</title>
+        <link rel="shortcut icon" href="imagens/favicon.png" type="image/png">
+    
+        <script>
+            function showInput() {
+    
+                document.getElementById('out1').innerHTML = document.getElementById('txtNome').value;
+    
+                document.getElementById('out2').innerHTML = document.querySelector('input[name="casa"]:checked').value;
+    
+    
+                var checked = [].reduce.call(document.forms[0].carac, function(current, item) {
+    
+                    if (item.checked) {
+    
+                        current.push(item.value);
+    
+                    }
+    
+                    return current;
+    
+                }, []);
+    
+                document.getElementById('out3').innerHTML = checked;
+    
+            }
+    
+        </script>
+    </head>
+    <body>
+        <div class="mae">
+            <div class="header">
+                <a href="index.html"><img id="logo" src="imagens/logo.png"></a>
+            </div>
+            <nav class="menu">
+                <a class="menu menu--option" href="jkrowling.html">J.K. Rowling</a>
+                <a class="menu menu--option" href="personagemfavorito.html">Personagem Favorito</a>
+               
+            </nav>
+        </div>
+        
+        <div class="casas-conteudo">
+            <div class="emblema">
+                <img src="imagens/gryffindor.png">
+            </div>
+            <div class="conteudo-texto">
+                <div class="frase-casa">
+                <p>
+                    "Quem sabe sua morada é a Grifinória</br>
+                    Casa onde habitam os corações indômitos.</br>
+                    Ousadia e sangue-frio e nobreza"</br>
+                    — O Chapéu Seletor
+                    
+                </p>
+            </div>
+            <p>
+                A Grifinória, fundada por Godrico Gryffindor, 
+                é uma das quatro casas da Escola de Magia e Bruxaria de Hogwarts. 
+                Ao estabelecê-la, Godrico instruiu o Chapéu Seletor a classificar estudantes que obtivessem características as quais ele mais valorizava, como a coragem, o cavalheirismo e a determinação. Suas cores são o escarlate e o ouro e seu animal emblemático é um leão. Sir Nicholas de Mimsy-Porpington, também conhecido como "Nick Quase Sem Cabeça" é o fantasma patrono da casa.
+
+            </p>
+            <hr>
+            <p class="subtitulo">Traços</p>
+            <p>
+                A Casa Grifinória enfatiza os traços de coragem, ousadia, bravura e cavalheirismo, portanto, seus membros são geralmente considerados nobres, 
+                embora às vezes ao ponto da imprudência. Notavelmente, a casa constitui um número considerável de membros pertencentes à Armada de Dumbledore e à Ordem da Fênix — embora tal possa ter ocorrido devido à imposição de seus principais membros 
+                em não se associar a qualquer outra casa.
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Corvinal</title>
+        <link rel="shortcut icon" href="imagens/favicon.png" type="image/png">
+    
+        <script>
+            function showInput() {
+    
+                document.getElementById('out1').innerHTML = document.getElementById('txtNome').value;
+    
+                document.getElementById('out2').innerHTML = document.querySelector('input[name="casa"]:checked').value;
+    
+    
+                var checked = [].reduce.call(document.forms[0].carac, function(current, item) {
+    
+                    if (item.checked) {
+    
+                        current.push(item.value);
+    
+                    }
+    
+                    return current;
+    
+                }, []);
+    
+                document.getElementById('out3').innerHTML = checked;
+    
+            }
+    
+        </script>
+    </head>
+    <body>
+        <div class="mae">
+            <div class="header">
+                <a href="index.html"><img id="logo" src="imagens/logo.png"></a>
+            </div>
+            <nav class="menu">
+                <a class="menu menu--option" href="jkrowling.html">J.K. Rowling</a>
+                <a class="menu menu--option" href="personagemfavorito.html">Personagem Favorito</a>
+               
+            </nav>
+        </div>
+        
+        <div class="casas-conteudo">
+            <div class="emblema">
+                <img src="imagens/ravenclaw.png">
+            </div>
+            <div class="conteudo-texto">
+                <div class="frase-casa">
+                <p>
+                    "Ou será a velha e sábia Corvinal,</br>
+                    A casa dos que têm a mente sempre alerta,</br>
+                    Onde os homens de grande espírito e saber</br>
+                    Sempre encontrarão companheiros seus iguais."</br>
+                    — O Chapéu Seletor
+
+                    
+                </p>
+            </div>
+            <p>
+                A Corvinal, fundada por Rowena Ravenclaw, é uma das quatro casas da Escola de Magia e Bruxaria de Hogwarts. 
+                Seus membros, comumente, são caracterizados por sua inteligência, aprendizado e sabedoria. Suas cores são o azul e bronze, o animal emblemático é uma águia e sua fantasma patrono é a Dama Cinzenta. A casa possui um diretor notável, o Mestre de Feitiços Fílio Flitwick.
+
+            </p>
+            <hr>
+            <p class="subtitulo">Traços</p>
+            <p>
+                A Casa Corvinal valoriza o aprendizado, a sabedoria, a inteligência e o intelecto de seus membros. Portanto, muitos Corvinos tendem a ser estudantes proeminentes e talentosos em meios acadêmicos. 
+                Não é incomum encontrar alunos da casa que praticam tipos consideravelmente complexos de magia. Hermione Granger, uma bruxa altamente inteligente e considerada a melhor aluna de seu ano escolar, foi selecionada para a Grifinória, embora tenha admitido que o Chapéu Seletor considerou seriamente colocá-la na Corvinal.
+
+            </p>
+        </div>
+    </body>
+</html>
